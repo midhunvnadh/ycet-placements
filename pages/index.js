@@ -33,16 +33,16 @@ export default class Students extends React.Component {
     return (
       <div className="container-fluid has-background-dark p-4">
         <div className="columns is-centered is-vcentered  min-100vh">
-          <div className="column is-4">
+          <div className="column is-auto">
             <main className="container has-text-centered py-3 force-center">
-              <div className="card rounded">
+              <div className="card rounded" style={{ overflow: "auto" }}>
                 {this.state.index != -1 && (
                   <Student details={this.students[this.state.index]} />
                 )}
               </div>
             </main>
           </div>
-          <div className="column is-3">
+          <div className="column is-auto">
             <PalleteGenerator />
             <Snapper
               changeIndex={this.changeIndex}

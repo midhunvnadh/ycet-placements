@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+.awes {
+  font-family: "Dancing Script", cursive;
+}
+
+:root {
+  --one: #ffeedb;
+  --two: #ffd8cc;
+  --three: #ffbd9b;
+  --four: #0a1d37;
+}
+body {
+  article {
+    width: 500px;
+    height: 520px;
+    background: var(--one);
+    border-radius: 3px;
+    box-shadow: none;
+    .header {
+      background: var(--two);
+      padding: 1em 10px;
+      .column {
+        padding: 0;
+      }
+      .logo {
+        width: 100px;
+        .logo-title {
+          font-size: 26px;
+          color: var(--four);
+        }
+        .logo-subtitle {
+          font-size: 13.2px;
+          font-weight: 600;
+          color: var(--four);
+        }
+        .address {
+          font-size: 9.7px;
+          color: var(--four);
+        }
+        * {
+          h1 {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            line-height: 1;
+          }
+        }
+      }
+      .accredition {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0.3em;
+        .acc-title {
+          h1 {
+            font-size: 8.2px;
+            color: var(--four);
+          }
+        }
+        .acc-subtitle {
+          h1 {
+            font-size: 14.5px;
+            font-weight: bolder;
+            color: var(--four);
+          }
+        }
+      }
+    }
+    .student-card-heading {
+      padding: 1em;
+      background: var(--two);
+      font-weight: bolder;
+      letter-spacing: 1.11px;
+      font-size: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: var(--four);
+    }
+    .body {
+      background: var(--two);
+      .congrats {
+        font-size: 32px;
+        color: var(--four);
+        font-weight: lighter;
+      }
+      .photo {
+        height: 164px;
+        width: 130px;
+        background: var(--one);
+        border-radius: 6px;
+      }
+      .body-apprec {
+        &.columns {
+          .column {
+            &.left {
+              .container {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+              }
+            }
+            &.right {
+              .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-direction: column;
+                text-align: start;
+
+                .for-spi p {
+                  font-size: 28px;
+                  font-weight: bolder;
+                  color: var(--four);
+                }
+                .company-logo {
+                  margin-block-start: 10px;
+                  width: 200px;
+                  background: var(--three);
+                  height: 70px;
+                  border-radius: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-card {
+      background: var(--two);
+      padding: 1em 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      .footer-cf-title {
+        color: var(--three);
+      }
+      .field {
+        button {
+          background: var(--three);
+          border-top: none;
+          border-bottom: none;
+          color: var(--two);
+          &:last-of-type {
+            border-right: none;
+          }
+          &:first-of-type {
+            border-left: none;
+          }
+        }
+      }
+      .contact {
+        color: var(--four);
+        font-weight: bolder;
+        font-family: "Courier New", Courier, monospace;
+      }
+    }
+  }
+  .min-100vh {
+    min-height: 100vh;
+    padding: 1em;
+  }
+  .force-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

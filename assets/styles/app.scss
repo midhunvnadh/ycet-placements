@@ -16,8 +16,11 @@
 }
 body {
   article {
+    * {
+      transition: all 0.1s ease-in-out;
+    }
     width: 500px;
-    height: 520px;
+    min-height: 520px;
     background: var(--one);
     border-radius: 3px;
     box-shadow: none;
@@ -78,8 +81,8 @@ body {
       font-weight: bolder;
       letter-spacing: 1.11px;
       font-size: 15px;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid var(--three);
+      border-bottom: 1px solid var(--three);
       color: var(--four);
     }
     .body {
@@ -89,42 +92,63 @@ body {
         color: var(--four);
         font-weight: lighter;
       }
-      .photo {
-        height: 164px;
-        width: 130px;
-        background: var(--one);
-        border-radius: 6px;
+      .photo-holder {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        .photo {
+          $factor: 60px;
+          height: 3 * $factor;
+          width: 2 * $factor;
+          max-height: 3 * $factor;
+          max-width: 2 * $factor;
+          overflow: hidden;
+          background: var(--one);
+          border-radius: 6px;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        label {
+          color: var(--four);
+          margin-block-start: 0.6em;
+        }
       }
       .body-apprec {
-        &.columns {
-          .column {
-            &.left {
-              .container {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-              }
-            }
-            &.right {
-              .container {
-                display: flex;
-                justify-content: space-around;
-                align-items: flex-start;
-                flex-direction: column;
-                text-align: start;
+        .left {
+          padding: 1em;
+          width: 50%;
+          .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+          }
+        }
+        .right {
+          width: 50%;
+          &.container {
+            padding: 1em;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: start;
 
-                .for-spi p {
-                  font-size: 28px;
-                  font-weight: bolder;
-                  color: var(--four);
-                }
-                .company-logo {
-                  margin-block-start: 10px;
-                  width: 200px;
-                  background: var(--three);
-                  height: 70px;
-                  border-radius: 6px;
-                }
+            .for-spi p {
+              font-size: 28px;
+              font-weight: bolder;
+              color: var(--four);
+            }
+            .company-logo {
+              margin-block-start: 10px;
+              width: 150px;
+              height: auto;
+              border-radius: 6px;
+              img {
+                height: 100%;
+                width: 100%;
               }
             }
           }
@@ -134,7 +158,7 @@ body {
     .footer-card {
       background: var(--two);
       padding: 1em 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid var(--four);
       .footer-cf-title {
         color: var(--three);
       }
@@ -157,6 +181,16 @@ body {
         font-weight: bolder;
         font-family: "Courier New", Courier, monospace;
       }
+    }
+    position: relative;
+    .attribution {
+      transform: rotate(90deg);
+      position: absolute;
+      right: -20px;
+      bottom: 42px;
+      color: red;
+      font-weight: bolder;
+      opacity: 0.2;
     }
   }
   .min-100vh {

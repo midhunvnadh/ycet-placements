@@ -43,15 +43,17 @@ export default class Students extends React.Component {
             </main>
           </div>
           <div className="column is-auto">
-            <PalleteGenerator />
-            <Snapper
-              changeIndex={this.changeIndex}
-              displayLeft={this.state.index === 0}
-              displayRight={this.state.index < this.students.length - 1}
-              status={`Photo ${this.state.index + 1} of ${
-                this.students.length
-              }`}
-            />
+            <div style={{ position: "sticky", top: 0 }}>
+              <PalleteGenerator />
+              <Snapper
+                changeIndex={this.changeIndex}
+                displayLeft={this.state.index === 0}
+                displayRight={this.state.index < this.students.length - 1}
+                status={`Photo ${this.state.index + 1} of ${
+                  this.students.length
+                }`}
+              />
+            </div>
           </div>
         </div>
       </div>

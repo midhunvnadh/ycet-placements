@@ -1,0 +1,36 @@
+body {
+  .full-sheet {
+    width: 800px;
+    .body-small {
+      background-color: var(--two);
+      .container {
+        .columns {
+          .column {
+            width: 20%;
+            .photo-holder-sm {
+              img {
+                border-radius: 0.4em;
+              }
+              .student-name {
+                color: var(--four);
+              }
+            }
+          }
+        }
+        .comp-logo-path {
+          position: relative;
+          img {
+            height: 40px;
+          }
+          margin-block-end: 1em;
+        }
+      }
+    }
+  }
+  .hover-full-op {
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

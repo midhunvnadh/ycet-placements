@@ -1,6 +1,9 @@
 body {
   .full-sheet {
     width: 800px;
+    .student-card-heading {
+      font-size: 25px;
+    }
     .body-small {
       background-color: var(--two);
       .container {
